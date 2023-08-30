@@ -13,7 +13,7 @@ function AddmissionForm() {
     <>
       <div className={Styles.main}>
         <div className={Styles.main__content}>
-          <CommonTittle text="First fill " colorText="admission form" rightText="then proceed next" />
+          <CommonTittle text="First fill {admission form} then proceed next"/>
           <div className={Styles.main__content__sociology}>
             <div className={Styles.main__content__sociology__card}>
               <CourseCard

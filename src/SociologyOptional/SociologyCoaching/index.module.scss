@@ -44,8 +44,8 @@
       column-gap: 50px;
 
       &__row {
-        width: 400px;
-        height: fit-content;
+        // width: 400px;
+        // height: fit-content;
         border-radius: 50px;
         overflow: hidden;
         & > img {
@@ -129,4 +129,8 @@
       }
     }
   }
+}
+
+.iconClass{
+  background-color: #6c63ac;
 }

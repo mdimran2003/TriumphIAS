@@ -8,7 +8,7 @@ const SociologySyllaus = () => {
   return (
     <>
       <section className={Style.syllabus}>
-        <CommonTittle text="SOCIOLOGY FOUNDATION WITH " colorText="DAILY ANSWER WRITING" />
+        <CommonTittle text="SOCIOLOGY FOUNDATION WITH {DAILY ANSWER WRITING}" />
 
         <div className={Style.syllabus__btnWrap}>
           <button className={Style.syllabus__btnWrap__left}>
@@ -18,7 +18,10 @@ const SociologySyllaus = () => {
             Click here to Enroll offline &nbsp; <span>51000/-</span>
           </button>
         </div>
-        <CommanHeading heading="Course Features for" highlight="Sociology Optional Syllabus:" />
+        <CommanHeading
+          heading="Course Features for"
+          highlight="Sociology Optional Syllabus:"
+        />
         <Item para="Daily 2 hours of sociology optional classes. At the end of the lecture, an assignment related to the sociology optional syllabus . topic is given based on sociology optional previous year question papers." />
         <Item para="After attending the online lecture, engage in a telephonic doubt discussion related to sociology optional notes with Vikash Sir." />
         <Item para="The course duration is four months, but your direct contact with Sir and his mentorship will remain till your final success in upsc sociology optional syllabus." />
@@ -35,7 +38,10 @@ const SociologySyllaus = () => {
         <CommanHeading heading="Personal " highlight="Mentorship:" />
         <Item para="Get personal mentorship from Vikash Sir for your sociology optional coaching, including general studies strategy, essay, and personality development for civil services." />
         <Item para="Regular one-on-one interaction & individual counseling for stress management and refinement of strategy for exams by Vikash Ranjan Sir." />
-        <CommanHeading heading="Specialist Guidance of" highlight="Vikash Ranjan Sir:" />
+        <CommanHeading
+          heading="Specialist Guidance of"
+          highlight="Vikash Ranjan Sir:"
+        />
         <Item para="Vikash Ranjan Sir is a specialist teacher of sociology optional with vast experience in teaching and writing sociology optional books. Under his guidance, students will not only learn sociology but also practice answer writing, focusing on the sociology optional question paper pattern." />
         <CommanHeading heading="At the End of the Class.." />
 
