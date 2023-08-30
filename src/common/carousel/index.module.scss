@@ -8,6 +8,9 @@
     width: 40px;
     border-radius: 50%;
     border: none;
+    @include if-device(phone){
+      display: none;
+    }
     & > i {
       color: #fff;
     }
@@ -23,6 +26,9 @@
     justify-content: center;
     align-items: center;
     right: -30px;
+    @include if-device(phone){
+      display: none;
+    }
     & > i {
       color: #fff;
     }

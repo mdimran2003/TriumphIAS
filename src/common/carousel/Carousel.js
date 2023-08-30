@@ -12,6 +12,7 @@ const Carousel = ({
   activeCardPosition = "left",
   handleNavClick,
   iconClass,
+  autoPlay = false,
 }) => {
   const renderButton = (isLeft, controlProps) => (
     <button
@@ -55,6 +56,8 @@ const Carousel = ({
       renderBottomCenterControls={null}
       animation="zoom"
       zoomScale={zoomScale}
+      autoplay={autoPlay}
+      autoplayInterval={3000}
       afterSlide={(index) => {
         if (handleNavClick) handleNavClick(index);
       }}

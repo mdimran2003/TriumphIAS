@@ -11,22 +11,30 @@ const aspirantObj = [
   { img: swati, name: "IAS Swati Sharma", rank: "AIR 26 UPSC CSE 2022" },
 ];
 
-const AspirantsSection = () => {
-  const [activeCardIndex,setActiveCardIndex] = useState(0)
+const AspirantsSection = ({ isMobile }) => {
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
   return (
     <div className={Styles.aspirantArea}>
-      <Carousel  gap={0}
-          activeCardPosition="center"
-          circular
-          numberOfCards={5}
-          zoomScale={2 / 3}
-          handleNavClick={setActiveCardIndex}>
-
-      {aspirantObj.map((item,index) => {
-        return <AspirantCard key={index} img={item.img} variant={index === activeCardIndex ? "light" : "dull"} name={item.name} rank={item.rank} />;
-      })}
+      <Carousel
+        gap={0}
+        activeCardPosition="center"
+        circular
+        numberOfCards={isMobile ? 3 : 5}
+        zoomScale={2 / 3}
+        handleNavClick={setActiveCardIndex}
+      >
+        {aspirantObj.map((item, index) => {
+          return (
+            <AspirantCard
+              key={index}
+              img={item.img}
+              variant={index === activeCardIndex ? "light" : "dull"}
+              name={item.name}
+              rank={item.rank}
+            />
+          );
+        })}
       </Carousel>
-     
     </div>
   );
 };
