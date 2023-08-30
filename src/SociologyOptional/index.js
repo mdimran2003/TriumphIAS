@@ -9,7 +9,6 @@ import OptionalSyllabus from "./OptionSyllabus";
 import Carousel from "../common/carousel/Carousel";
 import CommonTittle from "../Components/CommonTittle";
 import SelectionSection from "../Components/Selection-Section";
-import getColorTitle from "../common/util/getColorTitle";
 const SociologyOptional = () => {
   return (
     <>
