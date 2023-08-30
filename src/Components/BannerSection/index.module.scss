@@ -1,0 +1,167 @@
+@import "../../Styles/index.module.scss";
+.bannerArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0px;
+  @include if-device(phone) {
+    grid-template-columns: 1fr;
+  }
+  @include if-device(largephone) {
+    grid-template-columns: 1fr;
+  }
+  @include if-device(tablet) {
+    grid-template-columns: 1fr;
+  }
+  &__tittleArea {
+    padding: 60px 0;
+    @include if-device(phone) {
+      padding: 0;
+    }
+    @include if-device(largephone) {
+      padding: 0;
+    }
+    @include if-device(tablet) {
+      padding: 0;
+    }
+    & > h2 {
+      text-transform: uppercase;
+      font-size: 30px;
+      line-height: 50px;
+      font-family: "Nunito";
+      font-weight: 900;
+      margin-bottom: 20px;
+      @include if-device(phone) {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+      }
+      @include if-device(largephone) {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+      }
+      @include if-device(tablet) {
+        font-size: 25px;
+        line-height: 38px;
+        text-align: center;
+      }
+      & > span {
+        color: #ed2a26;
+      }
+    }
+    & > p {
+      width: 75%;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      line-height: 23px;
+      margin-bottom: 30px;
+      @include if-device(phone) {
+        width: 85%;
+        font-size: 14px;
+        text-align: center;
+        margin: auto;
+      }
+      @include if-device(largephone) {
+        width: 85%;
+        font-size: 14px;
+        text-align: center;
+        margin: auto;
+      }
+      @include if-device(tablet) {
+        width: 85%;
+        font-size: 14px;
+        text-align: center;
+        margin: auto;
+      }
+      & > span {
+        color: #ed2a26;
+      }
+    }
+    &__button {
+      width: 80%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      @include if-device(phone) {
+        width: 100%;
+        column-gap: 10px;
+      }
+      @include if-device(largephone) {
+        width: 100%;
+        column-gap: 10px;
+      }
+      @include if-device(tablet) {
+        width: 100%;
+        column-gap: 14px;
+      }
+    }
+  }
+  &__ciercelAre {
+    height: 580px;
+    overflow: hidden;
+    @include if-device(phone) {
+      width: 100%;
+      height: 375px;
+      margin-bottom: 10px;
+    }
+    @include if-device(largephone) {
+      width: 100%;
+      height: 375px;
+      margin-bottom: 10px;
+    }
+    @include if-device(tablet) {
+      width: 100%;
+      height: 375px;
+      margin-bottom: 10px;
+    }
+    &__bigImage {
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background-color: #f16865;
+      display: grid;
+      place-items: center;
+      margin-top: 70px;
+      @include if-device(phone) {
+        width: 335px;
+        margin: 70px auto 0 auto;
+        height: 335px;
+      }
+      @include if-device(largephone) {
+        width: 335px;
+        margin: 70px auto 0 auto;
+        height: 335px;
+      }
+      @include if-device(tablet) {
+        width: 335px;
+        margin: 70px auto 0 auto;
+        height: 335px;
+      }
+      &__image {
+        width: 45%;
+        overflow: hidden;
+        margin-top: -130px;
+        border-radius: 8px;
+        height: 520px;
+        background-color: #fff;
+        @include if-device(phone) {
+          margin-top: -66px;
+          height: 335px;
+        }
+        @include if-device(largephone) {
+          margin-top: -66px;
+          height: 335px;
+        }
+        @include if-device(tablet) {
+          margin-top: -66px;
+          height: 335px;
+        }
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

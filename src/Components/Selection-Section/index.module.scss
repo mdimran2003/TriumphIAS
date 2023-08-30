@@ -1,0 +1,22 @@
+@import "../../Styles/index.module.scss";
+.selectionArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
+  margin: 70px 0;
+  @include if-device(phone) {
+    margin: 25px 0;
+    column-gap: 5px;
+    grid-template-columns: 1fr;
+  }
+  @include if-device(largephone) {
+    margin: 25px 0;
+    column-gap: 5px;
+    grid-template-columns: 1fr;
+  }
+  @include if-device(tablet) {
+    margin: 25px 0;
+    column-gap: 5px;
+    grid-template-columns: 1fr;
+  }
+}

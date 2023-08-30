@@ -1,0 +1,125 @@
+@import "../../Styles/index.module.scss";
+
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &__content {
+    text-align: center;
+
+    &__heading {
+      margin: 30px 0;
+      > h2 {
+        font-size: 48px;
+        font-family: "Nunito";
+        margin: 20px 0;
+
+        @include if-device(phone) {
+          font-size: 20px;
+        }
+        @include if-device(tablet) {
+          font-size: 23px;
+        }
+        @include if-device(largephone) {
+          font-size: 30px;
+        }
+        > span {
+          color: #ee2a28;
+        }
+      }
+    }
+
+    &__sociology {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 30px;
+      margin: 50px 0;
+
+      @include if-device(phone) {
+        display: block;
+      }
+
+      @include if-device(tablet) {
+        display: block;
+      }
+      @include if-device(largephone) {
+        display: block;
+      }
+
+      &__card {
+        width: 405px;
+        @include if-device(phone) {
+          margin: 0 auto;
+          width: 100%;
+          height: 150px;
+        }
+        @include if-device(tablet) {
+          margin: 0 auto;
+          height: 200px;
+          width: 100%;
+        }
+
+        > img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      &__text {
+        > h2 {
+          font-size: 28px;
+          margin: 0;
+          font-weight: 700;
+          @include if-device(phone) {
+            font-size: 20px;
+            margin-top: 10px;
+            text-align: left;
+          }
+
+          @include if-device(tablet) {
+            font-size: 25px;
+            margin-top: 15px;
+            text-align: left;
+          }
+        }
+        > p {
+          font-size: 30px;
+          font-weight: 700;
+          margin-top: 10px;
+          font-family: "Nunito";
+
+          @include if-device(phone) {
+            font-size: 25px;
+            text-align: left;
+          }
+          @include if-device(tablet) {
+            font-size: 30px;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    &__form {
+      &__con {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 25px;
+        @include if-device(phone) {
+          grid-template-columns: 1fr 1fr;
+          row-gap: 15px;
+          column-gap: 15px;
+        }
+
+        @include if-device(tablet) {
+          grid-template-columns: 1fr 1fr;
+          row-gap: 18px;
+          column-gap: 20px;
+        }
+      }
+    }
+  }
+}

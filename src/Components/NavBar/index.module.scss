@@ -1,0 +1,19 @@
+.navArea {
+  & > ul {
+    display: flex;
+    & > li {
+      list-style: none;
+      padding: 10px 25px;
+      font-size: 18px;
+      font-family: "Nunito";
+      font-weight: 900;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        color: #f16865;
+        cursor: pointer;
+      }
+    }
+  }
+}

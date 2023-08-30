@@ -1,0 +1,21 @@
+@import "../../../Styles/index.module.scss";
+.batchArea {
+  padding: 14px 5px;
+  background-color: #f16151;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Nunito";
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-align: center;
+  @include if-device(phone) {
+    font-size: 19px;
+  }
+  @include if-device(largephone) {
+    font-size: 19px;
+  }
+  @include if-device(tablet) {
+    font-size: 22px;
+  }
+}

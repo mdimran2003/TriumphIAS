@@ -1,0 +1,189 @@
+@import "../../Styles/index.module.scss";
+.contactArea {
+  padding: 25px;
+  background-color: #f16151;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 30px;
+  @include if-device(phone) {
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  @include if-device(largephone) {
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  @include if-device(tablet) {
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  &__contactDetail {
+    flex: 1;
+    & > h3 {
+      color: #fff;
+      font-size: 42px;
+      font-family: "Nunito";
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      @include if-device(phone) {
+        font-size: 20px;
+      }
+      @include if-device(largephone) {
+        font-size: 20px;
+      }
+      @include if-device(tablet) {
+        font-size: 25px;
+      }
+    }
+    & > p {
+      color: #fff;
+      font-size: 21px;
+      @include if-device(phone) {
+        font-size: 11px;
+      }
+      @include if-device(largephone) {
+        font-size: 11px;
+      }
+      @include if-device(tablet) {
+        font-size: 17px;
+      }
+    }
+    &__contactHeader {
+      display: flex;
+      margin-top: 50px;
+      align-items: center;
+      column-gap: 10px;
+      @include if-device(phone) {
+        margin-top: 10px;
+      }
+      @include if-device(largephone) {
+        margin-top: 10px;
+      }
+      @include if-device(tablet) {
+        margin-top: 10px;
+      }
+      &__contactImg {
+        width: 100px;
+        height: 90px;
+        @include if-device(phone) {
+          width: 50px;
+          height: 50px;
+        }
+        @include if-device(largephone) {
+          width: 50px;
+          height: 50px;
+        }
+        @include if-device(tablet) {
+          width: 70px;
+          height: 65px;
+        }
+
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__contactNumber {
+        & > p {
+          color: #fff;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 45px;
+          font-family: "Nunito";
+          @include if-device(phone) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+          @include if-device(largephone) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+          @include if-device(tablet) {
+            font-size: 25px;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+    &__contactWithOnline {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      padding: 0 20px;
+      @include if-device(phone) {
+        padding: 0 5px;
+        margin-top: 15px;
+      }
+      @include if-device(largephone) {
+        padding: 0 5px;
+        margin-top: 15px;
+      }
+      @include if-device(tablet) {
+        padding: 0 5px;
+        margin-top: 15px;
+      }
+      & > span {
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        @include if-device(phone) {
+          width: 40px;
+          height: 40px;
+        }
+        @include if-device(largephone) {
+          width: 40px;
+          height: 40px;
+        }
+        @include if-device(tablet) {
+          width: 40px;
+          height: 40px;
+        }
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      & > h2 {
+        color: #fff;
+        font-size: 45px;
+        @include if-device(phone) {
+          font-size: 28px;
+        }
+        @include if-device(largephone) {
+          font-size: 28px;
+        }
+        @include if-device(tablet) {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  &__formArea {
+    width: 40%;
+    padding: 20px 15px;
+    border: 4px solid #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    border-radius: 8px;
+    @include if-device(phone) {
+      width: 100%;
+      padding: 10px 6px;
+      margin-top: 20px;
+    }
+    @include if-device(largephone) {
+      width: 100%;
+      padding: 10px 6px;
+      margin-top: 20px;
+    }
+    @include if-device(tablet) {
+      width: 100%;
+      padding: 10px 6px;
+      margin-top: 20px;
+    }
+  }
+}

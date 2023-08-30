@@ -1,0 +1,23 @@
+@import "../../Styles/index.module.scss";
+.titlleArea {
+  margin-bottom: 20px;
+  & > p {
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include if-device(phone) {
+      font-size: 15px;
+    }
+    @include if-device(largephone) {
+      font-size: 16px;
+    }
+    @include if-device(tablet) {
+      font-size: 22px;
+    }
+    & > span {
+      color: #ed2828;
+    }
+  }
+}

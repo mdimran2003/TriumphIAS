@@ -1,0 +1,16 @@
+@import "../../Styles/index.module.scss";
+.featureSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  margin: 30px 0;
+  @include if-device(phone) {
+    grid-template-columns: 1fr;
+  }
+  @include if-device(largephone) {
+    grid-template-columns: 1fr;
+  }
+  @include if-device(tablet) {
+    grid-template-columns: 1fr;
+  }
+}

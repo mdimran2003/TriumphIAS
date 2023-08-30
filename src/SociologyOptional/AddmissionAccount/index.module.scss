@@ -1,0 +1,53 @@
+@import "../../Styles/index.module.scss";
+
+.account {
+  padding: 10px 30px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    // padding: 10px 30px;
+    align-items: center;
+    text-align: start;
+    &__details {
+      & > h3 {
+        font-size: 22px;
+        @include if-device(phone) {
+          font-size: 15px;
+        }
+        @include if-device(largephone) {
+          font-size: 18px;
+        }
+      }
+    }
+    &__scanner {
+      width: 250px;
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+  &__paymentConfirmation {
+    background-color: rgb(233 101 43);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    @include if-device(phone) {
+      margin-top: 20px;
+    }
+    @include if-device(largephone) {
+      margin-top: 15px;
+    }
+    & > h3 {
+      color: #fff;
+    }
+  }
+  &__termAndCondition {
+    margin-top: 20px;
+    text-align: start;
+    & > h5 {
+      font-size: 14px;
+    }
+  }
+}

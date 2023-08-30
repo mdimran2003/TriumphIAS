@@ -1,0 +1,46 @@
+@import "../../../Styles/index.module.scss";
+.listArea {
+  & > ul {
+    list-style: none;
+    @include if-device(phone) {
+      margin-bottom: 40px;
+    }
+    @include if-device(largephone) {
+      margin-bottom: 40px;
+    }
+    @include if-device(tablet) {
+      margin-bottom: 40px;
+    }
+
+    & > li:first-child {
+      color: #ffff;
+      margin-bottom: 15px;
+      font-size: 23px;
+      @include if-device(phone) {
+        font-size: 14px;
+      }
+      @include if-device(largephone) {
+        font-size: 14px;
+      }
+      @include if-device(tablet) {
+        font-size: 22px;
+      }
+    }
+    & > li {
+      line-height: 28px;
+      cursor: pointer;
+      @include if-device(phone) {
+        line-height: 22px;
+        font-size: 12px;
+      }
+      @include if-device(largephone) {
+        line-height: 22px;
+        font-size: 12px;
+      }
+      @include if-device(tablet) {
+        line-height: 22px;
+        font-size: 18px;
+      }
+    }
+  }
+}

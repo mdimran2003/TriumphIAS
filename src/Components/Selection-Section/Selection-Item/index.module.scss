@@ -1,0 +1,21 @@
+@import "../../../Styles/index.module.scss";
+.cardArea {
+  &__image {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    @include if-device(phone) {
+      margin: 10px auto;
+    }
+    @include if-device(largephone) {
+      margin: 10px auto;
+    }
+    @include if-device(tablet) {
+      margin: 10px auto;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

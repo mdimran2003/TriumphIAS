@@ -1,0 +1,41 @@
+@import "../../Styles/index.module.scss";
+.guidArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ee2a29;
+  margin: 40px 0;
+  padding: 10px 70px 10px 40px;
+  border-radius: 12px;
+  @include if-device(phone) {
+    margin: 20px 0;
+    padding: 10px;
+  }
+  @include if-device(largephone) {
+    margin: 20px 0;
+    padding: 10px;
+  }
+  @include if-device(tablet) {
+    margin: 20px 0;
+    padding: 10px;
+  }
+  & > p {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 500;
+    @include if-device(phone) {
+      font-size: 11px;
+      text-align: center;
+    }
+    @include if-device(largephone) {
+      font-size: 12px;
+      text-align: center;
+    }
+    @include if-device(tablet) {
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}

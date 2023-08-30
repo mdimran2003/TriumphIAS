@@ -1,0 +1,14 @@
+@import "../../Styles/index.module.scss";
+.sociologyPage {
+  width: 80%;
+  margin: auto;
+  @include if-device(phone) {
+    width: 95%;
+  }
+  @include if-device(largephone) {
+    width: 95%;
+  }
+  @include if-device(tablet) {
+    width: 85%;
+  }
+}

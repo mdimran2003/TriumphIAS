@@ -1,0 +1,101 @@
+@import "../../Styles/index.module.scss";
+.aboutArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 0;
+  @include if-device(phone) {
+    grid-template-columns: 1fr;
+  }
+  @include if-device(largephone) {
+    grid-template-columns: 1fr;
+  }
+  @include if-device(tablet) {
+    grid-template-columns: 1fr;
+  }
+  &__imageArea {
+    &__image {
+      width: 90%;
+      height: 500px;
+      overflow: hidden;
+      @include if-device(phone) {
+        width: 100%;
+        height: 360px;
+      }
+      @include if-device(largephone) {
+        width: 100%;
+        height: 360px;
+      }
+      @include if-device(tablet) {
+        width: 100%;
+        height: 500px;
+      }
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & > span {
+      display: inline-block;
+      width: 90%;
+      margin-top: -5px;
+      @include if-device(phone) {
+        width: 100%;
+      }
+      @include if-device(largephone) {
+        width: 100%;
+      }
+      @include if-device(tablet) {
+        width: 100%;
+      }
+    }
+  }
+  &__detailArea {
+    & > p {
+      font-size: 20px;
+      line-height: 32px;
+      font-family: serif;
+      @include if-device(phone) {
+        font-size: 17px;
+        line-height: 25px;
+        font-family: serif;
+        margin-top: 16px;
+      }
+      @include if-device(largephone) {
+        font-size: 17px;
+        line-height: 25px;
+        font-family: serif;
+        margin-top: 16px;
+      }
+      @include if-device(tablet) {
+        font-size: 18px;
+        line-height: 25px;
+        font-family: serif;
+        margin-top: 16px;
+      }
+    }
+    & > ul {
+      & > h3 {
+        margin: 20px 0;
+      }
+      & > li {
+        color: #e03029;
+        padding: 8px 0;
+        font-size: 18px;
+        font-weight: 600;
+
+        @include if-device(phone) {
+          padding: 4px 0;
+          font-size: 14px;
+        }
+        @include if-device(largephone) {
+          padding: 4px 0;
+          font-size: 14px;
+        }
+        @include if-device(tablet) {
+          padding: 4px 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
