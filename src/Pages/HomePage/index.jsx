@@ -24,7 +24,7 @@ const HomePage = () => {
         <CommonTittle text="Courses {offered}" />
         <CourseSection />
         <CommonTittle text="Selected {aspirants} feedBacks" />
-        <AspirantsSection />
+        <AspirantsSection isMobile={isMobile} />
         <CommonTittle text="About {Vikash ranjan} sir" />
         <ContactSection />
         <AboutRanjanSir />
@@ -43,7 +43,7 @@ const HomePage = () => {
       <CommonTittle text="Courses {offered}" />
       <CourseSection />
       <CommonTittle text="Selected {aspirants} feedBacks" />
-      <AspirantsSection />
+      <AspirantsSection  isMobile={isMobile} />
       <CommonTittle text="About {Vikash ranjan} sir" />
       <AboutRanjanSir />
       <ContactSection />

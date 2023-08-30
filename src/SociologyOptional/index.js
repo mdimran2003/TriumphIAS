@@ -13,7 +13,7 @@ const SociologyOptional = () => {
   return (
     <>
       <section className={Style.bannerSection}>
-        <Carousel gap={0} circular numberOfCards={1}>
+        <Carousel gap={0} circular numberOfCards={1} autoPlay={true}>
           <div className={Style.bannerSection__image}>
             <img src={Img1} alt="error" />
           </div>

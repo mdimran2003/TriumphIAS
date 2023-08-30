@@ -20,6 +20,7 @@ const SociologyCoaching = () => {
               circular
               numberOfCards={2}
               iconClass={Style.iconClass}
+              autoPlay={true}
             >
               <div
                 className={Style.BestSociologyCoching__latest__sliderwrap__row}
