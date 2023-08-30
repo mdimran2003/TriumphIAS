@@ -1,6 +1,4 @@
 import React from "react";
-import Styles from "./index.module.scss";
-import Header from "../../Components/Header";
 import BannerSection from "../../Components/BannerSection";
 import GuidSection from "../../Components/Guid-Section";
 import CommonTittle from "../../Components/CommonTittle";
@@ -12,8 +10,6 @@ import AboutRanjanSir from "../../Components/AboutRanjanSir";
 import ContactSection from "../../Components/ContactSection";
 import AppStoreSection from "../../Components/AppStoreSection";
 import MessageSection from "../../Components/MessageSection";
-import MapSection from "../../Components/MapSection";
-import FooterSection from "../../Components/FooterSection";
 import { isMobile } from "react-device-detect";
 const HomePage = () => {
   if (isMobile) {
