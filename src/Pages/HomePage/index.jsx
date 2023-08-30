@@ -18,8 +18,7 @@ import { isMobile } from "react-device-detect";
 const HomePage = () => {
   if (isMobile) {
     return (
-      <div className={Styles.homePage}>
-        <Header />
+      <div >
         <BannerSection />
         <GuidSection />
         <CommonTittle text="100+ selections in cse 2022 @" colorText="triumph ias" />
@@ -34,13 +33,11 @@ const HomePage = () => {
         <ContactSection />
         <AboutRanjanSir />
         <AppStoreSection />
-        <FooterSection />
       </div>
     );
   }
   return (
-    <div className={Styles.homePage}>
-      <Header />
+    <div>
       <BannerSection />
       <GuidSection />
       <CommonTittle text="100+ selections in cse 2022 @" colorText="triumph ias" />
@@ -56,8 +53,6 @@ const HomePage = () => {
       <ContactSection />
       <AppStoreSection />
       <MessageSection />
-      <MapSection />
-      <FooterSection />
     </div>
   );
 };
