@@ -5,7 +5,6 @@ import CommonTittle from "../../Components/CommonTittle";
 import CourseSection from "../../Components/CoursesSection";
 import AboutRanjanSir from "../../Components/AboutRanjanSir";
 import AppStoreSection from "../../Components/AppStoreSection";
-import MapSection from "../../Components/MapSection";
 import SociologyFoundation from "../../SociologyOptional/SociologyFoundation";
 const RegistraionPage = () => {
   return (
@@ -18,7 +17,6 @@ const RegistraionPage = () => {
       <CommonTittle text="About" colorText="Vikash ranjan" rightText="sir" />
       <AboutRanjanSir />
       <AppStoreSection />
-      <MapSection />
     </div>
   );
 };
