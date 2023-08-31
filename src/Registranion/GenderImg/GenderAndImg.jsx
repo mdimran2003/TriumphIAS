@@ -29,14 +29,14 @@ function GenderAndImg({ onGenderchange, formData, errors, onImageFileChange, onD
               <p>Image (Max-size: 300kb) jpeg*</p>
               <input type="file" id="file" name="file" accept=".jpeg, .jpg" onChange={(e) => onImageFileChange(e.target.files[0])} />
             </div>
-            {errors.imageFile && <p className={Styles.error}>{errors.imageFile}</p>}
+            {errors.photo && <p className={Styles.error}>{errors.photo}</p>}
           </div>
           <div className={Styles.c3}>
             <div className={Styles.main__con__aadhar}>
               <p>ID Card (Aadhar Card / VoterID / Passport) (Max-size: 300kb) jpeg*</p>
               <input type="file" id="aadhar" name="aadhar" accept=".jpeg, .jpg" onChange={(e) => onDocumentFileChange(e.target.files[0])} />
             </div>
-            {errors.documentFile && <p className={Styles.error}>{errors.documentFile}</p>}
+            {errors.idcard && <p className={Styles.error}>{errors.idcard}</p>}
           </div>
         </div>
       </div>

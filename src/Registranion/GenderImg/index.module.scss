@@ -215,7 +215,7 @@
 }
 .c2 {
   @include if-device(phone) {
-    width: 50%;
+    width: 100%;
   }
   @include if-device(tablet) {
     width: 100%;

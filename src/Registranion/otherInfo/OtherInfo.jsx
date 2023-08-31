@@ -18,7 +18,7 @@ function OtherInfo({ onStreetChange, errors, onStateChange, onCityChange, onPinc
                 onStreetChange(e.target.value);
               }}
             />
-            {errors.street && <p className={Styles.error}>{errors.street}</p>}
+            {errors.UserAddress1 && <p className={Styles.error}>{errors.UserAddress1}</p>}
           </div>
           <div>
             <FormInput
@@ -31,7 +31,7 @@ function OtherInfo({ onStreetChange, errors, onStateChange, onCityChange, onPinc
                 onStateChange(e.target.value);
               }}
             />
-            {errors.state && <p className={Styles.error}>{errors.state}</p>}
+            {errors.UserState && <p className={Styles.error}>{errors.UserState}</p>}
           </div>
 
           <div>
@@ -45,7 +45,7 @@ function OtherInfo({ onStreetChange, errors, onStateChange, onCityChange, onPinc
                 onCityChange(e.target.value);
               }}
             />
-            {errors.city && <p className={Styles.error}>{errors.city}</p>}
+            {errors.UserCity && <p className={Styles.error}>{errors.UserCity}</p>}
           </div>
           <div>
             <FormInput
@@ -58,7 +58,7 @@ function OtherInfo({ onStreetChange, errors, onStateChange, onCityChange, onPinc
                 onPincodechange(e.target.value);
               }}
             />
-            {errors.pincode && <p className={Styles.error}>{errors.pincode}</p>}
+            {errors.UserPinCode && <p className={Styles.error}>{errors.UserPinCode}</p>}
           </div>
         </div>
       </div>

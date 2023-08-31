@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Styles from "./index.module.scss";
 
 function FormInput({ type, placeholder, name, id, label, onKeyUp, onChange }) {

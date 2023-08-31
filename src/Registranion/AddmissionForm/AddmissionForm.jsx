@@ -7,117 +7,129 @@ import Textarea from "../textarea/Textarea";
 import CourseCard from "../../Components/CoursesSection/Courses-Card";
 import CommonTittle from "../../Components/CommonTittle";
 import courseImg from "../../Assets/SOCIOLOGY FOR IAS.png";
-import CommonPurpleButton from "../../Components/CommonButton/index";
+
 import Submit from "../submitBtn/Submit";
 
 function AddmissionForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
+    UserName: "",
+    UserPhone: "",
+    UserEmail: "",
     dob: "",
-    whatsappNo: "",
-    fatherName: "",
-    fatherPhoneNo: "",
-    street: "",
-    state: "",
-    city: "",
-    pincode: "",
-    textarea: "",
+    UserWhatsappNo: "",
+    fName: "",
+    fNumber: "",
+    UserAddress1: "",
+    UserState: "",
+    UserCity: "",
+    UserPinCode: "",
+    AddInfo: "",
     gender: "",
-    imageFile: "",
-    documentFile: "",
+    photo: "",
+    idcard: "",
+    qfcation: "",
   });
 
   const [errors, setErrors] = useState({
-    name: "",
-    phone: "",
-    email: "",
+    UserName: "",
+    UserPhone: "",
+    UserEmail: "",
     dob: "",
-    whatsappNo: "",
-    fatherName: "",
-    fatherPhoneNo: "",
-    street: "",
-    state: "",
-    city: "",
-    pincode: "",
+    UserWhatsappNo: "",
+    fName: "",
+    fNumber: "",
+    UserAddress1: "",
+    UserState: "",
+    UserCity: "",
+    UserPinCode: "",
     gender: "",
-    imageFile: "",
-    documentFile: "",
+    photo: "",
+    idcard: "",
+    qfcation: "",
   });
 
-  const validateForm = () => {
+  const handleInputchange = (input) => {
+    setFormData(input);
+    validateForm(input);
+  };
+
+  const validateForm = (formData) => {
     const newErrors = {};
 
-    if (!formData.name) {
-      newErrors.name = "Name is required";
+    if (!formData.UserName) {
+      newErrors.UserName = "Name is required";
+    }
+    if (!formData.qfcation) {
+      newErrors.qfcation = "Qualifications is required";
     }
 
-    if (!formData.phone) {
-      newErrors.phone = "Phone is required";
-    } else if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = "Phone must be a 10-digit number";
+    if (!formData.UserPhone) {
+      newErrors.UserPhone = "Phone is required";
+    } else if (!/^\d{10}$/.test(formData.UserPhone)) {
+      newErrors.UserPhone = "Phone must be a 10-digit number";
     }
 
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Invalid email format";
+    if (!formData.UserEmail) {
+      newErrors.UserEmail = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.UserEmail)) {
+      newErrors.UserEmail = "Invalid email format";
     }
 
     if (!formData.dob) {
       newErrors.dob = "DOB is required";
     }
-    if (!formData.whatsappNo) {
-      newErrors.whatsappNo = "whatsappNo is required";
-    } else if (!/^\d{10}$/.test(formData.whatsappNo)) {
-      newErrors.whatsappNo = "whatsappNo must be a 10-digit number";
+    if (!formData.UserWhatsappNo) {
+      newErrors.UserWhatsappNo = "whatsappNo is required";
+    } else if (!/^\d{10}$/.test(formData.UserWhatsappNo)) {
+      newErrors.UserWhatsappNo = "whatsappNo must be a 10-digit number";
     }
 
-    if (!formData.fatherName) {
-      newErrors.fatherName = "Father Name is required";
+    if (!formData.fName) {
+      newErrors.fName = "Father Name is required";
     }
 
-    if (!formData.fatherPhoneNo) {
-      newErrors.fatherPhoneNo = "Father Phone No is required";
-    } else if (!/^\d{10}$/.test(formData.fatherPhoneNo)) {
-      newErrors.fatherPhoneNo = "Father Phone No must be a 10-digit number";
+    if (!formData.fNumber) {
+      newErrors.fNumber = "Father Phone No is required";
+    } else if (!/^\d{10}$/.test(formData.fNumber)) {
+      newErrors.fNumber = "Father Phone No must be a 10-digit number";
     }
 
-    if (!formData.street) {
-      newErrors.street = "Street Name is required";
+    if (!formData.UserAddress1) {
+      newErrors.UserAddress1 = "Street Name is required";
     }
-    if (!formData.state) {
-      newErrors.state = "State is required";
+    if (!formData.UserState) {
+      newErrors.UserState = "State is required";
     }
 
-    if (!formData.city) {
-      newErrors.city = "City is required";
+    if (!formData.UserCity) {
+      newErrors.UserCity = "City is required";
     }
-    if (!formData.pincode) {
-      newErrors.pincode = "Pincode is required";
+    if (!formData.UserPinCode) {
+      newErrors.UserPinCode = "Pincode is required";
+    } else if (!/^\d{6}$/.test(formData.UserPinCode)) {
+      newErrors.UserPinCode = "PinCode must be a 6-digit number";
     }
 
     if (!formData.gender) {
       newErrors.gender = "Gender is required";
     }
 
-    if (!formData.imageFile) {
-      newErrors.imageFile = "Image file is required";
-    } else if (formData.imageFile.size > 300 * 1024) {
+    if (!formData.photo) {
+      newErrors.photo = "Image file is required";
+    } else if (formData.photo.size > 300 * 1024) {
       console.log(true);
-      newErrors.imageFile = "Image file size exceeds 300kb";
-    } else if (!formData.imageFile.name.toLowerCase().endsWith(".jpeg") && !formData.imageFile.name.toLowerCase().endsWith(".jpg")) {
-      newErrors.imageFile = "Only JPEG files are allowed";
+      newErrors.photo = "Image file size exceeds 300kb";
+    } else if (!formData.photo.name.toLowerCase().endsWith(".jpeg") && !formData.photo.name.toLowerCase().endsWith(".jpg")) {
+      newErrors.photo = "Only JPEG files are allowed";
     }
 
-    if (!formData.documentFile) {
-      newErrors.documentFile = "Image file is required";
-    } else if (formData.documentFile.size > 300 * 1024) {
+    if (!formData.idcard) {
+      newErrors.idcard = "Image file is required";
+    } else if (formData.idcard.size > 300 * 1024) {
       console.log(true);
-      newErrors.documentFile = "Image file size exceeds 300kb";
-    } else if (!formData.documentFile.name.toLowerCase().endsWith(".jpeg") && !formData.documentFile.name.toLowerCase().endsWith(".jpg")) {
-      newErrors.documentFile = "Only JPEG files are allowed";
+      newErrors.idcard = "Image file size exceeds 300kb";
+    } else if (!formData.idcard.name.toLowerCase().endsWith(".jpeg") && !formData.idcard.name.toLowerCase().endsWith(".jpg")) {
+      newErrors.idcard = "Only JPEG files are allowed";
     }
 
     setErrors(newErrors);
@@ -127,36 +139,41 @@ function AddmissionForm() {
   const streetChageHander = (changeValue) => {
     setFormData((prevData) => ({
       ...prevData,
-      street: changeValue,
+      UserAddress1: changeValue,
     }));
+    validateForm({ ...formData, UserAddress1: changeValue });
   };
 
   const stateChageHander = (changeValue) => {
     setFormData((prevData) => ({
       ...prevData,
-      state: changeValue,
+      UserState: changeValue,
     }));
+    validateForm({ ...formData, UserState: changeValue });
   };
 
   const cityChageHander = (changeValue) => {
     setFormData((prevData) => ({
       ...prevData,
-      city: changeValue,
+      UserCity: changeValue,
     }));
+    validateForm({ ...formData, UserCity: changeValue });
   };
 
   const pincodeChageHander = (changeValue) => {
     setFormData((prevData) => ({
       ...prevData,
-      pincode: changeValue,
+      UserPinCode: changeValue,
     }));
+    validateForm({ ...formData, UserPinCode: changeValue });
   };
 
   const textareaHandler = (changeValue) => {
     setFormData((prevData) => ({
       ...prevData,
-      textarea: changeValue,
+      AddInfo: changeValue,
     }));
+    validateForm({ ...formData, AddInfo: changeValue });
   };
 
   const genderSubmit = (selectedGender) => {
@@ -164,30 +181,29 @@ function AddmissionForm() {
       ...prevData,
       gender: selectedGender,
     }));
-    console.log(selectedGender);
+
+    validateForm({ ...formData, gender: selectedGender });
   };
 
   const handleImageFileChange = (ImageFileData) => {
-    console.log(ImageFileData);
-    // console.log(ImageFile);
     setFormData((prevData) => ({
       ...prevData,
-      imageFile: ImageFileData,
+      photo: ImageFileData,
     }));
+    validateForm({ ...formData, photo: ImageFileData });
   };
 
   const handleDocumentFileChange = (ImageDocumentData) => {
-    console.log(ImageDocumentData);
-    // console.log(ImageFile);
     setFormData((prevData) => ({
       ...prevData,
-      documentFile: ImageFileData,
+      idcard: ImageDocumentData,
     }));
+    validateForm({ ...formData, idcard: ImageDocumentData });
   };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    if (validateForm()) {
+    if (validateForm(formData)) {
       console.log(formData);
       // Perform form submission logic here
       console.log("Form submitted successfully", formData);
@@ -212,8 +228,15 @@ function AddmissionForm() {
             <div className={Styles.main__content__form}>
               <div className={Styles.main__content__form__con}>
                 <div className={Styles.main__content__form__con_inputGroup}>
-                  <FormInput type="text" placeholder="Your Full Name" name="Name" id="name" label="Name*" onKeyUp={(e) => setFormData({ ...formData, name: e.target.value })} />
-                  {errors.name && <p className={Styles.error}>{errors.name}</p>}
+                  <FormInput
+                    type="text"
+                    placeholder="Your Full Name"
+                    name="Name"
+                    id="name"
+                    label="Name*"
+                    onChange={(e) => handleInputchange({ ...formData, UserName: e.target.value })}
+                  />
+                  {errors.UserName && <p className={Styles.error}>{errors.UserName}</p>}
                 </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
                   <FormInput
@@ -222,9 +245,9 @@ function AddmissionForm() {
                     name="phone"
                     id="phone"
                     label="Phone*"
-                    onKeyUp={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    onChange={(e) => handleInputchange({ ...formData, UserPhone: e.target.value })}
                   />
-                  {errors.phone && <p className={Styles.error}>{errors.phone}</p>}
+                  {errors.UserPhone && <p className={Styles.error}>{errors.UserPhone}</p>}
                 </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
                   <FormInput
@@ -233,16 +256,25 @@ function AddmissionForm() {
                     name="email"
                     id="email"
                     label="Email-ID*"
-                    onKeyUp={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) => handleInputchange({ ...formData, UserEmail: e.target.value })}
                   />
-                  {errors.email && <p className={Styles.error}>{errors.email}</p>}
+                  {errors.UserEmail && <p className={Styles.error}>{errors.UserEmail}</p>}
                 </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
-                  <FormInput type="date" placeholder="dd-mm-yyyy" name="dob" id="dob" label="DOB*" onChange={(e) => setFormData({ ...formData, dob: e.target.value })} />
+                  <FormInput type="date" placeholder="dd-mm-yyyy" name="dob" id="dob" label="DOB*" onChange={(e) => handleInputchange({ ...formData, dob: e.target.value })} />
                   {errors.dob && <p className={Styles.error}>{errors.dob}</p>}
                 </div>
-
-                <FormInput type="text" placeholder="" name="qualification" id="qualification" label="Qualification*" />
+                <div className={Styles.main__content__form__con_inputGroup}>
+                  <FormInput
+                    type="text"
+                    placeholder=""
+                    name="qualification"
+                    id="qualification"
+                    label="Qualification*"
+                    onChange={(e) => handleInputchange({ ...formData, qfcation: e.target.value })}
+                  />
+                  {errors.qfcation && <p className={Styles.error}>{errors.qfcation}</p>}
+                </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
                   <FormInput
                     type="number"
@@ -250,9 +282,9 @@ function AddmissionForm() {
                     name="whatsappNo"
                     id="whatsapp"
                     label="Whatsapp No*"
-                    onKeyUp={(e) => setFormData({ ...formData, whatsappNo: e.target.value })}
+                    onChange={(e) => handleInputchange({ ...formData, UserWhatsappNo: e.target.value })}
                   />
-                  {errors.whatsappNo && <p className={Styles.error}>{errors.whatsappNo}</p>}
+                  {errors.UserWhatsappNo && <p className={Styles.error}>{errors.UserWhatsappNo}</p>}
                 </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
                   <FormInput
@@ -261,9 +293,9 @@ function AddmissionForm() {
                     name="fatherName"
                     id="fatherName"
                     label="Father Name*"
-                    onKeyUp={(e) => setFormData({ ...formData, fatherName: e.target.value })}
+                    onChange={(e) => handleInputchange({ ...formData, fName: e.target.value })}
                   />
-                  {errors.fatherName && <p className={Styles.error}>{errors.fatherName}</p>}
+                  {errors.fName && <p className={Styles.error}>{errors.fName}</p>}
                 </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
                   <FormInput
@@ -272,9 +304,9 @@ function AddmissionForm() {
                     name="fatherPhoneNo"
                     id="fatherPhoneNo"
                     label="Father Ph No*"
-                    onKeyUp={(e) => setFormData({ ...formData, fatherPhoneNo: e.target.value })}
+                    onChange={(e) => handleInputchange({ ...formData, fNumber: e.target.value })}
                   />
-                  {errors.fatherPhoneNo && <p className={Styles.error}>{errors.fatherPhoneNo}</p>}
+                  {errors.fNumber && <p className={Styles.error}>{errors.fNumber}</p>}
                 </div>
               </div>
             </div>
