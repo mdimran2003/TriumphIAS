@@ -1,0 +1,17 @@
+.btnArea {
+  padding: 3px 30px 3px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  font-size: 32px;
+  color: #fff;
+  background-color: #ff0604;
+  & > input {
+    width: 35px;
+    height: 35px;
+  }
+  & > label {
+    margin-bottom: 5px;
+  }
+}

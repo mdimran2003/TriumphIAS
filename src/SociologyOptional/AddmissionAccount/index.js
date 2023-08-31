@@ -18,7 +18,7 @@ const AdmissionAccount = () => {
             <h3>Branch- RAJENDRA NAGAR</h3>
           </div>
           <div className={Style.account__wrap__scanner}>
-            <img src={Img} />
+            <img src={Img} alt="error" />
           </div>
         </div>
         <div className={Style.account__paymentConfirmation}>

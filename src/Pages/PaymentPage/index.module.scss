@@ -1,0 +1,43 @@
+.paymentArea {
+  margin: 20px 0;
+
+  &__paymentFormAea {
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    &__formField {
+      row-gap: 10px;
+    }
+    &__bankDetail {
+      &__aboutPayment {
+        color: black;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 15px 0;
+        font-family: "Philosopher";
+      }
+      & > ul {
+        padding-left: 30px;
+        font-family: "Philosopher";
+        & > li {
+          font-size: 18px;
+          margin: 5px 0;
+          & > span {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  &__paymentMode {
+    width: 85%;
+    &__bankOption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      margin-bottom: 20px;
+    }
+  }
+}

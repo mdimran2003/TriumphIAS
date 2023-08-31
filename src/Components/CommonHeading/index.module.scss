@@ -1,0 +1,11 @@
+.headingArea {
+  margin-bottom: 15px;
+  & > p {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    & > span {
+      color: red;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import Styles from "./index.module.scss";
-const CommonTittle = ({ text, colorText, rightText }) => {
+const CommonTittle = ({ text, colorText, rightText, fontFamily }) => {
   return (
     <div className={Styles.titlleArea}>
-      <p>
+      <p style={{ fontFamily: `${fontFamily}` }}>
         {text} <span>{colorText}</span>
         <span> </span>
         {rightText}
