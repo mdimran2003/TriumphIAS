@@ -15,5 +15,14 @@
       grid-template-columns: 1fr;
       column-gap: 0;
     }
+
+    @include if-device(largephone) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
   }
+}
+.error {
+  color: red;
+  text-align: left;
 }

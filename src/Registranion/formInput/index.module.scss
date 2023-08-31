@@ -10,33 +10,49 @@
     flex-wrap: wrap;
 
     > input {
-      padding: 20px 30px;
-
+      padding: 15px 20px;
+      font-size: 15px;
       width: 100%;
       border-radius: 5px;
       outline: none;
       border: 1px solid gray;
       @include if-device(phone) {
-        padding: 15px 10px;
+        padding: 8px 10px;
       }
       @include if-device(tablet) {
-        padding: 20px 15px;
+        padding: 12px 15px;
+      }
+      @include if-device(largephone) {
+        padding: 15px 20px;
       }
       &::placeholder {
-        font-size: 20px;
+        font-size: 16px;
         @include if-device(phone) {
+          font-size: 12px;
+        }
+        @include if-device(tablet) {
+          font-size: 14px;
+        }
+
+        @include if-device(largephone) {
           font-size: 15px;
         }
       }
     }
     > label {
-      font-size: 25px;
+      font-size: 20px;
       font-family: "Nunito";
-      font-weight: 700;
+      font-weight: 600;
       text-align: left;
       width: 100%;
       @include if-device(phone) {
         font-size: 18px;
+      }
+      @include if-device(tablet) {
+        font-size: 18px;
+      }
+      @include if-device(largephone) {
+        font-size: 20px;
       }
     }
   }
