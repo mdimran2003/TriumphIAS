@@ -7,7 +7,7 @@ import { isMobile } from "react-device-detect";
 
 function RootLayout({ children }) {
   return (
-    <div className={Styles.root}>
+    <div>
       {!isMobile && <Header />}
       {children}
       <MapSection />

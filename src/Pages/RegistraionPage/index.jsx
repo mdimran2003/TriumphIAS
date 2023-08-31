@@ -12,7 +12,7 @@ const RegistraionPage = () => {
       <AddmissionForm />
       <CommonTittle text="Explore the latest videos on {sociology} foundation" />
       <SociologyFoundation />
-      <CommonTittle text="Courses {offered}"/>
+      <CommonTittle text="Courses {offered}" />
       <CourseSection />
       <CommonTittle text="About {Vikash ranjan} sir" />
       <AboutRanjanSir />

@@ -11,15 +11,16 @@ import ContactSection from "../../Components/ContactSection";
 import AppStoreSection from "../../Components/AppStoreSection";
 import MessageSection from "../../Components/MessageSection";
 import { isMobile } from "react-device-detect";
+import Styles from "./index.module.scss";
 const HomePage = () => {
   if (isMobile) {
     return (
-      <div >
+      <div className={Styles.homePage}>
         <BannerSection />
         <GuidSection />
         <CommonTittle text="100+ selections in cse 2022 @{triumph ias}" />
         <SelectionSection isMobile={isMobile} />
-        <CommonTittle text="why choose {triumph ias?}"  />
+        <CommonTittle text="why choose {triumph ias?}" />
         <FeatureSection />
         <CommonTittle text="Courses {offered}" />
         <CourseSection />
@@ -33,17 +34,17 @@ const HomePage = () => {
     );
   }
   return (
-    <div>
+    <div className={Styles.homePage}>
       <BannerSection />
       <GuidSection />
       <CommonTittle text="100+ selections in cse 2022 @{triumph ias}" />
       <SelectionSection isMobile={isMobile} />
-      <CommonTittle text="why choose {triumph ias?}"  />
+      <CommonTittle text="why choose {triumph ias?}" />
       <FeatureSection />
       <CommonTittle text="Courses {offered}" />
       <CourseSection />
       <CommonTittle text="Selected {aspirants} feedBacks" />
-      <AspirantsSection  isMobile={isMobile} />
+      <AspirantsSection isMobile={isMobile} />
       <CommonTittle text="About {Vikash ranjan} sir" />
       <AboutRanjanSir />
       <ContactSection />
