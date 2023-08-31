@@ -7,7 +7,6 @@ import Textarea from "../textarea/Textarea";
 import CourseCard from "../../Components/CoursesSection/Courses-Card";
 import CommonTittle from "../../Components/CommonTittle";
 import courseImg from "../../Assets/SOCIOLOGY FOR IAS.png";
-
 import Submit from "../submitBtn/Submit";
 
 function AddmissionForm() {
@@ -204,8 +203,6 @@ function AddmissionForm() {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (validateForm(formData)) {
-      console.log(formData);
-      // Perform form submission logic here
       console.log("Form submitted successfully", formData);
     }
   };
