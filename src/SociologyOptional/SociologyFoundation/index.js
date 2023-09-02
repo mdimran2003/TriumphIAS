@@ -25,6 +25,12 @@ const SociologyFoundation = () => {
           <div className={Style.foundation__wrap__image}>
             <img src={Img4} alt="error" />
           </div>
+          <div className={Style.foundation__wrap__image}>
+            <img src={Img} alt="error" />
+          </div>
+          <div className={Style.foundation__wrap__image}>
+            <img src={Img2} alt="error" />
+          </div>
         </div>
       </section>
     </>

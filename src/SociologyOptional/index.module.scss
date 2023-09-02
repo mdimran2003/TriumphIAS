@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .bannerSection {
   &__image {
     height: 440px;
@@ -22,7 +18,7 @@
     &__leftBtn {
       position: absolute;
       left: 6%;
-      top: 30%;
+      top: 40%;
       background-color: #ee2a29;
       height: 40px;
       width: 40px;
@@ -35,7 +31,7 @@
     &__rightBtn {
       position: absolute;
       right: 6%;
-      top: 30%;
+      top: 40%;
       background-color: #ee2a29;
       border-radius: 50%;
       border: none;
