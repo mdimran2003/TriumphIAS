@@ -21,14 +21,21 @@
       }
 
       &::placeholder {
-        font-size: 20px;
+        font-size: 16px;
         @include if-device(phone) {
+          font-size: 12px;
+        }
+        @include if-device(tablet) {
+          font-size: 14px;
+        }
+
+        @include if-device(largephone) {
           font-size: 15px;
         }
       }
     }
     > label {
-      font-size: 25px;
+      font-size: 20px;
       font-family: "Nunito";
       font-weight: 600;
       text-align: left;
@@ -36,6 +43,12 @@
       margin-bottom: 5px;
       @include if-device(phone) {
         font-size: 18px;
+      }
+      @include if-device(tablet) {
+        font-size: 18px;
+      }
+      @include if-device(largephone) {
+        font-size: 20px;
       }
     }
   }

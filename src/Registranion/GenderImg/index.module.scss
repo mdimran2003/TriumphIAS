@@ -19,22 +19,36 @@
     @include if-device(tablet) {
       margin: 30px 0;
       flex-wrap: wrap;
+      column-gap: 50px;
+    }
+    @include if-device(largephone) {
+      margin: 30px 0;
+      flex-wrap: wrap;
+      column-gap: 50px;
     }
 
     &__gender {
+      display: flex;
+      align-items: start;
+      column-gap: 15px;
+
       @include if-device(phone) {
-        width: 40%;
+        width: 100%;
       }
       @include if-device(tablet) {
-        width: 40%;
+        width: 100%;
+      }
+      @include if-device(largephone) {
+        width: 100%;
       }
 
-      > form {
+      &__radioGroup {
+        text-align: left;
+        margin-bottom: 10px;
         > input {
-          font-size: 45px;
-          font-family: "Nunito";
-          font-weight: 700;
-          text-align: left;
+          height: 15px;
+          width: 15px;
+          margin-right: 10px;
 
           @include if-device(phone) {
             font-size: 18px;
@@ -42,18 +56,25 @@
           @include if-device(tablet) {
             font-size: 20px;
           }
+          @include if-device(largephone) {
+            font-size: 20px;
+          }
         }
         > label {
-          font-size: 25px;
+          font-size: 20px;
           font-family: "Nunito";
-          font-weight: 700;
+          font-weight: 600;
           text-align: left;
           width: 100%;
+
           @include if-device(phone) {
-            font-size: 15px;
+            font-size: 18px;
           }
           @include if-device(tablet) {
             font-size: 18px;
+          }
+          @include if-device(largephone) {
+            font-size: 20px;
           }
         }
       }
@@ -61,15 +82,19 @@
 
     &__img {
       @include if-device(phone) {
-        width: 50%;
+        width: 100%;
         text-align: center;
       }
       @include if-device(tablet) {
-        width: 50%;
+        width: 100%;
+        text-align: center;
+      }
+      @include if-device(largephone) {
+        width: 100%;
         text-align: center;
       }
       border: 2px solid gray;
-      padding: 20px;
+      padding: 15px;
       border-radius: 20px;
       @include if-device(phone) {
         padding: 5px;
@@ -77,25 +102,39 @@
       @include if-device(tablet) {
         padding: 5px;
       }
+      @include if-device(largephone) {
+        padding: 5px;
+      }
       > p {
         font-size: 20px;
         font-family: "Nunito";
-        font-weight: 700;
+        font-weight: 600;
         margin-top: 10px;
+        margin-bottom: 10px;
         @include if-device(phone) {
-          font-size: 12px;
+          font-size: 18px;
         }
         @include if-device(tablet) {
           font-size: 18px;
         }
+        @include if-device(largephone) {
+          font-size: 20px;
+        }
       }
       > input {
-        font-size: 18px;
+        font-size: 15px;
+
         @include if-device(phone) {
           font-size: 10px;
+          margin-bottom: 10px;
         }
         @include if-device(tablet) {
           font-size: 15px;
+          margin-bottom: 10px;
+        }
+        @include if-device(largephone) {
+          font-size: 18px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -109,8 +148,12 @@
         width: 100%;
         margin-top: 20px;
       }
+      @include if-device(largephone) {
+        width: 100%;
+        margin-top: 20px;
+      }
       border: 2px solid rgb(182, 172, 172);
-      padding: 20px;
+      padding: 18px 15px;
       border-radius: 20px;
       @include if-device(phone) {
         padding: 15px;
@@ -118,22 +161,77 @@
       @include if-device(tablet) {
         padding: 18px;
       }
+      @include if-device(largephone) {
+        padding: 20px;
+      }
       > p {
-        font-size: 20px;
+        font-size: 16px;
         font-family: "Nunito";
-        font-weight: 700;
+        font-weight: 600;
         margin-top: 10px;
+        margin-bottom: 10px;
 
         @include if-device(phone) {
-          font-size: 10px;
+          font-size: 11px;
         }
         @include if-device(tablet) {
-          font-size: 22px;
+          font-size: 15px;
+        }
+        @include if-device(largephone) {
+          font-size: 20px;
         }
       }
       > input {
         font-size: 15px;
+        @include if-device(phone) {
+          font-size: 11px;
+        }
+        @include if-device(tablet) {
+          font-size: 11px;
+        }
+        @include if-device(largephone) {
+          font-size: 18px;
+        }
       }
     }
+  }
+}
+
+.error {
+  color: red;
+  text-align: left;
+}
+
+.c1 {
+  @include if-device(phone) {
+    width: 50%;
+  }
+  @include if-device(tablet) {
+    width: 50%;
+  }
+  @include if-device(largephone) {
+    width: 100%;
+  }
+}
+.c2 {
+  @include if-device(phone) {
+    width: 100%;
+  }
+  @include if-device(tablet) {
+    width: 100%;
+  }
+  @include if-device(largephone) {
+    width: 100%;
+  }
+}
+.c3 {
+  @include if-device(phone) {
+    width: 100%;
+  }
+  @include if-device(tablet) {
+    width: 100%;
+  }
+  @include if-device(largephone) {
+    width: 100%;
   }
 }

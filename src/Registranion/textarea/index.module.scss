@@ -29,7 +29,7 @@
       }
       &::placeholder {
         font-family: "Nunito";
-        font-size: 25px;
+
         @include if-device(phone) {
           font-size: 18px;
         }
@@ -39,9 +39,9 @@
       }
     }
     > label {
-      font-size: 25px;
+      font-size: 20px;
       font-family: "Nunito";
-      font-weight: 700;
+      font-weight: 600;
       width: 100%;
       display: block;
       text-align: left;
@@ -55,4 +55,8 @@
       }
     }
   }
+}
+.error {
+  color: red;
+  text-align: left;
 }

@@ -1,7 +1,15 @@
 import React from "react";
 import Styles from "./index.module.scss";
 
-function FormInput({ type, placeholder, name, id, label, marginBottom, laberMargin }) {
+function FormInput({
+  type,
+  placeholder,
+  name,
+  id,
+  label,
+  marginBottom,
+  laberMargin,
+}) {
   return (
     <>
       <div style={{ marginBottom: `${marginBottom}` }} className={Styles.main}>

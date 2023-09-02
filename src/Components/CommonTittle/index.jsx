@@ -1,12 +1,17 @@
 import React from "react";
 import Styles from "./index.module.scss";
-const CommonTittle = ({ text, colorText, rightText, fontFamily }) => {
+import getColorTitle from "../../common/util/getColorTitle";
+const CommonTittle = ({ text }) => {
   return (
     <div className={Styles.titlleArea}>
-      <p style={{ fontFamily: `${fontFamily}` }}>
-        {text} <span>{colorText}</span>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: getColorTitle(text),
+        }}
+      >
+        {/* {text} <span>{colorText}</span>
         <span> </span>
-        {rightText}
+        {rightText} */}
       </p>
     </div>
   );
