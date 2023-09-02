@@ -9,6 +9,7 @@ import OptionalSyllabus from "./OptionSyllabus";
 import Carousel from "../common/carousel/Carousel";
 import CommonTittle from "../Components/CommonTittle";
 import SelectionSection from "../Components/Selection-Section";
+import { isMobile } from "react-device-detect";
 const SociologyOptional = () => {
   return (
     <>
@@ -33,7 +34,7 @@ const SociologyOptional = () => {
           text="{Sociology} Optional For IAS | Toppers of {Sociology}"
           // colorText="Sociology"
         />
-        <SelectionSection />
+        <SelectionSection isMobile={isMobile} />
 
         <SociologySyllaus />
         <OptionalSyllabus />

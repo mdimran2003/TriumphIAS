@@ -32,13 +32,6 @@ const Carousel = ({
     </button>
   );
 
-  //   <button className={Style.bannerSection__crouselBtn__leftBtn}>
-  //   <i className="fa-solid fa-angle-left"></i>
-  // </button>
-  // <button className={Style.bannerSection__crouselBtn__rightBtn}>
-  //   <i className="fa-solid fa-angle-right"></i>
-  // </button>
-
   const renderLeftButton = (props) => renderButton(true, props);
 
   const renderRightButton = (props) => renderButton(false, props);
