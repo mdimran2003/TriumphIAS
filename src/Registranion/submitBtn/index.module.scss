@@ -1,0 +1,41 @@
+@import "../../Styles/index.module.scss";
+
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &__content {
+    text-align: right;
+    margin-bottom: 20px;
+    > button {
+      font-size: 20px;
+      padding: 15px 30px;
+      color: #ffffff;
+      background-color: #ee2a28;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+
+      @include if-device(phone) {
+        font-size: 15px;
+        padding: 12px 20px;
+      }
+      @include if-device(tablet) {
+        font-size: 15px;
+        padding: 12px 20px;
+      }
+
+      @include if-device(largephone) {
+        font-size: 15px;
+        padding: 12px 20px;
+      }
+
+      &:hover {
+        background-color: #d00f0c;
+        cursor: pointer;
+      }
+    }
+  }
+}
