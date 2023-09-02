@@ -1,17 +1,8 @@
 @import "../../Styles/index.module.scss";
 .footerArea {
-  padding: 25px 30px;
+  padding: 25px 10px;
   background-color: #ee2a29;
   position: relative;
-  @include if-device(phone) {
-    padding: 80px 15px 280px 15px;
-  }
-  @include if-device(largephone) {
-    padding: 80px 15px 300px 15px;
-  }
-  @include if-device(tablet) {
-    padding: 80px 15px 580px 15px;
-  }
   &__flexBox {
     display: flex;
     justify-content: space-between;
@@ -69,6 +60,7 @@
       }
     }
     &__contactSocialmedia {
+      margin: auto;
       &__address {
         width: 270px;
         height: 220px;
@@ -76,18 +68,13 @@
         border-top-left-radius: 35%;
         border-bottom-right-radius: 35%;
         position: relative;
-        @include if-device(phone) {
-          margin-left: 28px;
-        }
         @include if-device(largephone) {
-          margin-left: 50px;
           width: 300px;
           height: 270px;
         }
         @include if-device(tablet) {
           width: 370px;
           height: 320px;
-          margin-left: 150px;
         }
 
         & > ul {

@@ -2,8 +2,9 @@ import React from "react";
 import Styles from "./index.module.scss";
 import logo from "../../Assets/logo (1).png";
 import NavBar from "../NavBar";
+import MenuBar from "../MenuBar";
 const Header = () => {
-  return (
+  return (<>
     <div className={Styles.headerArea}>
       <div className={Styles.headerArea__logo}>
         <img src={logo} alt="error" />
@@ -12,6 +13,8 @@ const Header = () => {
         <NavBar />
       </div>
     </div>
+    {/* <MenuBar/> */}
+  </>
   );
 };
 

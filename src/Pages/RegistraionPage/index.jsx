@@ -10,11 +10,11 @@ const RegistraionPage = () => {
   return (
     <div className={Styles.registrationArea}>
       <AddmissionForm />
-      <CommonTittle text="Explore the latest videos on" colorText="sociology" rightText="foundation" />
+      <CommonTittle text="Explore the latest videos on {sociology} foundation" />
       <SociologyFoundation />
-      <CommonTittle text="Courses" colorText="offered" />
+      <CommonTittle text="Courses {offered}"/>
       <CourseSection />
-      <CommonTittle text="About" colorText="Vikash ranjan" rightText="sir" />
+      <CommonTittle text="About {Vikash ranjan} sir" />
       <AboutRanjanSir />
       <AppStoreSection />
     </div>
