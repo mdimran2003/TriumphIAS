@@ -1,0 +1,35 @@
+@import "../../Styles/index.module.scss";
+
+  .leftBtn {
+    position: relative;
+    left: -30px;
+    background-color: #ee2a29;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    @include if-device(phone){
+      display: none;
+    }
+    & > i {
+      color: #fff;
+    }
+  }
+  .rightBtn {
+    position: relative;
+    background-color: #ee2a29;
+    border-radius: 50%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -30px;
+    @include if-device(phone){
+      display: none;
+    }
+    & > i {
+      color: #fff;
+    }
+  }

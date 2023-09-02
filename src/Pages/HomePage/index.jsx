@@ -17,15 +17,15 @@ const HomePage = () => {
       <div >
         <BannerSection />
         <GuidSection />
-        <CommonTittle text="100+ selections in cse 2022 @" colorText="triumph ias" />
-        <SelectionSection />
-        <CommonTittle text="why choose" colorText="triumph ias?" />
+        <CommonTittle text="100+ selections in cse 2022 @{triumph ias}" />
+        <SelectionSection isMobile={isMobile} />
+        <CommonTittle text="why choose {triumph ias?}"  />
         <FeatureSection />
-        <CommonTittle text="Courses" colorText="offered" />
+        <CommonTittle text="Courses {offered}" />
         <CourseSection />
-        <CommonTittle text="Selected" colorText="aspirants" rightText="feedBacks" />
-        <AspirantsSection />
-        <CommonTittle text="About" colorText="Vikash ranjan" rightText="sir" />
+        <CommonTittle text="Selected {aspirants} feedBacks" />
+        <AspirantsSection isMobile={isMobile} />
+        <CommonTittle text="About {Vikash ranjan} sir" />
         <ContactSection />
         <AboutRanjanSir />
         <AppStoreSection />
@@ -36,15 +36,15 @@ const HomePage = () => {
     <div>
       <BannerSection />
       <GuidSection />
-      <CommonTittle text="100+ selections in cse 2022 @" colorText="triumph ias" />
-      <SelectionSection />
-      <CommonTittle text="why choose" colorText="triumph ias?" />
+      <CommonTittle text="100+ selections in cse 2022 @{triumph ias}" />
+      <SelectionSection isMobile={isMobile} />
+      <CommonTittle text="why choose {triumph ias?}"  />
       <FeatureSection />
-      <CommonTittle text="Courses" colorText="offered" />
+      <CommonTittle text="Courses {offered}" />
       <CourseSection />
-      <CommonTittle text="Selected" colorText="aspirants" rightText="feedBacks" />
-      <AspirantsSection />
-      <CommonTittle text="About" colorText="Vikash ranjan" rightText="sir" />
+      <CommonTittle text="Selected {aspirants} feedBacks" />
+      <AspirantsSection  isMobile={isMobile} />
+      <CommonTittle text="About {Vikash ranjan} sir" />
       <AboutRanjanSir />
       <ContactSection />
       <AppStoreSection />
