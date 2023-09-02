@@ -14,6 +14,17 @@
     &__image {
       width: 350px;
       height: 260px;
+      @include if-device(phone) {
+        width: 100%;
+      }
+      @include if-device(largephone) {
+        width: 100%;
+        height: auto;
+      }
+      @include if-device(tablet) {
+        width: 100%;
+        height: auto;
+      }
       & > img {
         width: 100%;
       }

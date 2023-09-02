@@ -2,6 +2,7 @@ import React from "react";
 import Style from "./index.module.scss";
 import Img from "../../Assets/Vikash Ranjan sir.png";
 import CommonTittle from "../../Components/CommonTittle";
+import OTPSection from "../../Components/OTP-Section";
 
 const OptionalSyllabus = () => {
   return (
@@ -13,12 +14,7 @@ const OptionalSyllabus = () => {
           <button>Click to Read the Syllabus</button>
           <button>Download Syllabus PDF</button>
         </div>
-        <div className={Style.syllabus__wrap__right}>
-          <h4>Get Start with Triumph IAS</h4>
-          <input type="text" placeholder="Enter phone number" />
-          <p>An OTP Will be send for varification</p>
-          <button>Continue</button>
-        </div>
+        <OTPSection/>
       </div>
       <div className={Style.syllabus__aboutSection}>
         <div className={Style.syllabus__aboutSection__image}>

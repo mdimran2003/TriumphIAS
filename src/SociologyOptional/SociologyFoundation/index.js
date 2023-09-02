@@ -10,7 +10,11 @@ const SociologyFoundation = () => {
   return (
     <>
       <section className={Style.foundation}>
-        <CommonTittle text=" LATEST VIDEOS ON" colorText="SOCIOLOGY" rightText="FOUNDATION" />
+        <CommonTittle
+          text=" LATEST VIDEOS ON"
+          colorText="SOCIOLOGY"
+          rightText="FOUNDATION"
+        />
 
         <div className={Style.foundation__wrap}>
           <div className={Style.foundation__wrap__image}>
@@ -24,6 +28,12 @@ const SociologyFoundation = () => {
           </div>
           <div className={Style.foundation__wrap__image}>
             <img src={Img4} alt="error" />
+          </div>
+          <div className={Style.foundation__wrap__image}>
+            <img src={Img} alt="error" />
+          </div>
+          <div className={Style.foundation__wrap__image}>
+            <img src={Img2} alt="error" />
           </div>
         </div>
       </section>
