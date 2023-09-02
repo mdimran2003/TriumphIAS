@@ -19,18 +19,15 @@
       outline: none;
       border: 1px solid gray;
       height: 300px;
-      padding: 0;
-
+      padding: 10px;
+      font-size: 22px;
       @include if-device(phone) {
-        padding: 0px;
         height: 150px;
       }
       @include if-device(tablet) {
-        padding: 0;
         height: 300px;
       }
       &::placeholder {
-        font-size: 20px;
         font-family: "Nunito";
         font-size: 25px;
         @include if-device(phone) {

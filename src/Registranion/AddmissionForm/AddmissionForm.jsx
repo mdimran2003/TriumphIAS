@@ -7,6 +7,7 @@ import Textarea from "../textarea/Textarea";
 import CourseCard from "../../Components/CoursesSection/Courses-Card";
 import CommonTittle from "../../Components/CommonTittle";
 import courseImg from "../../Assets/SOCIOLOGY FOR IAS.png";
+import CommonFormHeading from "../../Components/CommonFormHeading";
 
 function AddmissionForm() {
   return (
@@ -28,7 +29,7 @@ function AddmissionForm() {
               <p>By Vikash Ranjan Sir</p>
             </div>
           </div>
-
+          <CommonFormHeading text="Student Details" />
           <div className={Styles.main__content__form}>
             <div className={Styles.main__content__form__con}>
               <FormInput type="text" placeholder="Your Full Name" name="Name" id="name" label="Name*" />
@@ -45,6 +46,7 @@ function AddmissionForm() {
           <div className={Styles.main__content__genderAndImg}>
             <GenderAndImg />
           </div>
+          <CommonFormHeading text="Addresses" />
           <div className={Styles.main__content__otherInfo}>
             <OtherInfo />
           </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import Styles from "./index.module.scss";
-const CommonHeading = ({ text, colorText, rightText, fontSize, marginBottom }) => {
+const CommonHeading = ({ text, colorText, rightText, styles }) => {
   return (
     <div className={Styles.headingArea}>
-      <p style={{ fontSize: `${fontSize}`, marginBottom: `${marginBottom}` }}>
+      <p className={styles}>
         {text} <span>{colorText}</span> {rightText}
       </p>
     </div>

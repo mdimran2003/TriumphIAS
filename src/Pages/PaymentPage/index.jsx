@@ -9,6 +9,7 @@ import SociologyFoundation from "../../SociologyOptional/SociologyFoundation";
 import AboutRanjanSir from "../../Components/AboutRanjanSir";
 import AppStoreSection from "../../Components/AppStoreSection";
 import CommonRadioButton from "../../Components/CommonRadioButton";
+import CommonFormHeading from "../../Components/CommonFormHeading";
 const PaymentPage = () => {
   return (
     <div className={Styles.paymentArea}>
@@ -16,6 +17,7 @@ const PaymentPage = () => {
       <CommonTittle text="Registration payment" />
       <div className={Styles.paymentArea__paymentFormAea}>
         <div className={Styles.paymentArea__paymentFormAea__formField}>
+          <CommonFormHeading text="Course Details" />
           <FormInput
             laberMargin="10px"
             marginBottom="20px"
@@ -23,7 +25,6 @@ const PaymentPage = () => {
             placeholder="Sociology foundation with daily answer writing"
             name="CourseDetails"
             id="Course-Details"
-            label="Course Details"
           />
           <FormInput marginBottom="20px" type="text" placeholder="Online Classroom Program" name="OnlineClassroomProgram" />
           <FormInput type="text" placeholder="Course Fee: ₹49,000/-" name="CourseFee" />
@@ -59,14 +60,13 @@ const PaymentPage = () => {
         </div>
       </div>
       <CommonHeading
-        marginBottom="80px"
-        fontSize="30px"
+        styles={Styles.fontDetails}
         text="Make Payment via Any Payment Mode &"
         colorText="Enter Transaction ID"
         rightText="Once Payment is Done"
       />
       <div className={Styles.paymentArea__paymentMode}>
-        <CommonHeading fontSize="30px" text="Select Payment Mode" />
+        <CommonFormHeading text="Select Payment Mode" />
         <div className={Styles.paymentArea__paymentMode__bankOption}>
           <CommonRadioButton label="ICICI EasyPay" name="ICICI" />
           <CommonRadioButton label="Deposit in Branch / Online Transfer" name="PaymentMode" backgroundColor="#8383ff" />
