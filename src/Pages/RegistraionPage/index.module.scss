@@ -1,14 +1,14 @@
 @import "../../Styles/index.module.scss";
 .registrationArea {
-  width: 80%;
+  width: 100%;
   margin: auto;
   @include if-device(phone) {
-    width: 95%;
+    width: 100%;
   }
   @include if-device(largephone) {
-    width: 95%;
+    width: 100%;
   }
   @include if-device(tablet) {
-    width: 85%;
+    width: 100%;
   }
 }

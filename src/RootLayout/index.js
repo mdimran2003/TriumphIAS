@@ -6,19 +6,19 @@ import MapSection from "../Components/MapSection";
 import { isMobile } from "react-device-detect";
 import MenuBar from "../Components/MenuBar";
 function RootLayout({ children }) {
-  if(isMobile){
-    return(
+  if (isMobile) {
+    return (
       <div className={Styles.root}>
-      <MenuBar/>
-      {children}
-      <MapSection />
-      <FooterSection />
-    </div>
-    )
+        <MenuBar />
+        {children}
+        <MapSection />
+        <FooterSection />
+      </div>
+    );
   }
   return (
     <div className={Styles.root}>
-      <Header />
+      {!isMobile && <Header />}
       {children}
       <MapSection />
       <FooterSection />

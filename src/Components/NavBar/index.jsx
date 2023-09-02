@@ -4,8 +4,13 @@ const NavBar = () => {
   return (
     <div className={Styles.navArea}>
       <ul>
-        <li>Home</li>
-        <li>Sociology</li>
+        <li>
+          <a href="/"> Home </a>
+        </li>
+        <li>
+          <a href="/SociologyPage"> Sociology </a>
+        </li>
+
         <li>Essay</li>
         <li>Gs</li>
         <li>Test Series</li>

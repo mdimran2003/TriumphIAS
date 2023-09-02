@@ -10,11 +10,7 @@ const SociologyFoundation = () => {
   return (
     <>
       <section className={Style.foundation}>
-        <CommonTittle
-          text=" LATEST VIDEOS ON"
-          colorText="SOCIOLOGY"
-          rightText="FOUNDATION"
-        />
+        <CommonTittle text=" LATEST VIDEOS ON {SOCIOLOGY}  FOUNDATION" />
 
         <div className={Style.foundation__wrap}>
           <div className={Style.foundation__wrap__image}>
