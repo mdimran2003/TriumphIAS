@@ -1,0 +1,30 @@
+@import "../../Styles/index.module.scss";
+.btnArea {
+  padding: 3px 30px 3px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  font-size: 32px;
+  color: #fff;
+  background-color: #ff0604;
+  @include if-device(phone) {
+    padding: 3px 15px 3px 10px;
+    border-radius: 10px;
+    column-gap: 10px;
+    font-size: 16px;
+  }
+  @include if-device(largePhone) {
+    padding: 3px 15px 3px 10px;
+    border-radius: 10px;
+    column-gap: 10px;
+    font-size: 16px;
+  }
+  & > input {
+    width: 35px;
+    height: 35px;
+  }
+  & > label {
+    margin-bottom: 5px;
+  }
+}

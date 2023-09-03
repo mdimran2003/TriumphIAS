@@ -7,6 +7,7 @@ import Textarea from "../textarea/Textarea";
 import CourseCard from "../../Components/CoursesSection/Courses-Card";
 import CommonTittle from "../../Components/CommonTittle";
 import courseImg from "../../Assets/SOCIOLOGY FOR IAS.png";
+import CommonFormHeading from "../../Components/CommonFormHeading";
 import Submit from "../submitBtn/Submit";
 
 function AddmissionForm() {
@@ -211,15 +212,44 @@ function AddmissionForm() {
     <>
       <div className={Styles.main}>
         <div className={Styles.main__content}>
-          <CommonTittle text="First fill {admission form} then proceed next"/>
+          <CommonTittle text="First fill {admission form} then proceed next" />
           <div className={Styles.main__content__sociology}>
             <div className={Styles.main__content__sociology__card}>
-              <CourseCard corsrName="SOCIOLOGY FOR IAS" corseDetails="Live and Recorded Courses by Vikash Ranjan Sir" img={courseImg} explore="Explore the Course" />
+              <CourseCard
+                corsrName="SOCIOLOGY FOR IAS"
+                corseDetails="Live and Recorded Courses by Vikash Ranjan Sir"
+                img={courseImg}
+                explore="Explore the Course"
+              />
             </div>
             <div className={Styles.main__content__sociology__text}>
               <h2>SOCIOLOGY FOUNDATION WITH DAILY ANSWER WRITING</h2>
               <p>By Vikash Ranjan Sir</p>
             </div>
+          </div>
+          <CommonFormHeading text="Student Details" />
+          <div className={Styles.main__content__form}>
+            <div className={Styles.main__content__form__con}>
+              <FormInput type="text" placeholder="Your Full Name" name="Name" id="name" label="Name*" />
+              <FormInput type="number" placeholder="Your Calling Number" name="phone" id="phone" label="Phone*" />
+              <FormInput type="email" placeholder="Your Email Address" name="email" id="email" label="Email-ID*" />
+              <FormInput type="date" placeholder="dd-mm-yyyy" name="dob" id="dob" label="DOB*" />
+
+              <FormInput type="text" placeholder="" name="qualification" id="qualification" label="Qualification" />
+              <FormInput type="number" placeholder="Your Whatsapp No" name="whatsappNo" id="whatsapp" label="Whatsapp No" />
+              <FormInput type="text" placeholder="" name="fatherName" id="fatherName" label="Father Name*" />
+              <FormInput type="number" placeholder="" name="fatherPhoneNo" id="fatherPhoneNo" label="Father Ph No*" />
+            </div>
+          </div>
+          <div className={Styles.main__content__genderAndImg}>
+            <GenderAndImg />
+          </div>
+          <CommonFormHeading text="Addresses" />
+          <div className={Styles.main__content__otherInfo}>
+            <OtherInfo />
+          </div>
+          <div className={Styles.main__content__textarea}>
+            <Textarea />
           </div>
           <form onSubmit={onSubmitHandler}>
             <div className={Styles.main__content__form}>
@@ -258,7 +288,14 @@ function AddmissionForm() {
                   {errors.UserEmail && <p className={Styles.error}>{errors.UserEmail}</p>}
                 </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
-                  <FormInput type="date" placeholder="dd-mm-yyyy" name="dob" id="dob" label="DOB*" onChange={(e) => handleInputchange({ ...formData, dob: e.target.value })} />
+                  <FormInput
+                    type="date"
+                    placeholder="dd-mm-yyyy"
+                    name="dob"
+                    id="dob"
+                    label="DOB*"
+                    onChange={(e) => handleInputchange({ ...formData, dob: e.target.value })}
+                  />
                   {errors.dob && <p className={Styles.error}>{errors.dob}</p>}
                 </div>
                 <div className={Styles.main__content__form__con_inputGroup}>
@@ -317,7 +354,13 @@ function AddmissionForm() {
               />
             </div>
             <div className={Styles.main__content__otherInfo}>
-              <OtherInfo onStreetChange={streetChageHander} onStateChange={stateChageHander} onCityChange={cityChageHander} onPincodechange={pincodeChageHander} errors={errors} />
+              <OtherInfo
+                onStreetChange={streetChageHander}
+                onStateChange={stateChageHander}
+                onCityChange={cityChageHander}
+                onPincodechange={pincodeChageHander}
+                errors={errors}
+              />
             </div>
             <div className={Styles.main__content__textarea}>
               <Textarea onTextarea={textareaHandler} />

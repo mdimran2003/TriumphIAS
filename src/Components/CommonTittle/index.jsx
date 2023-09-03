@@ -4,9 +4,11 @@ import getColorTitle from "../../common/util/getColorTitle";
 const CommonTittle = ({ text }) => {
   return (
     <div className={Styles.titlleArea}>
-      <p   dangerouslySetInnerHTML={{
-            __html: getColorTitle(text),
-          }}>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: getColorTitle(text),
+        }}
+      >
         {/* {text} <span>{colorText}</span>
         <span> </span>
         {rightText} */}

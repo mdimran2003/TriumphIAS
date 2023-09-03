@@ -10,21 +10,16 @@
     flex-wrap: wrap;
 
     > input {
-      padding: 15px 20px;
-      font-size: 15px;
+      padding: 10px 20px;
+      font-size: 20px;
       width: 100%;
       border-radius: 5px;
       outline: none;
       border: 1px solid gray;
       @include if-device(phone) {
-        padding: 8px 10px;
+        font-size: 16px;
       }
-      @include if-device(tablet) {
-        padding: 12px 15px;
-      }
-      @include if-device(largephone) {
-        padding: 15px 20px;
-      }
+
       &::placeholder {
         font-size: 16px;
         @include if-device(phone) {
@@ -45,6 +40,7 @@
       font-weight: 600;
       text-align: left;
       width: 100%;
+      margin-bottom: 5px;
       @include if-device(phone) {
         font-size: 18px;
       }

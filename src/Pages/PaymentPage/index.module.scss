@@ -1,0 +1,74 @@
+@import "../../Styles/index.module.scss";
+.paymentArea {
+  margin: 20px 0;
+
+  &__paymentFormAea {
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    @include if-device(phone) {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+    @include if-device(largePhone) {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+    @include if-device(tablet) {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+    &__formField {
+      row-gap: 10px;
+    }
+    &__bankDetail {
+      &__aboutPayment {
+        color: black;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 15px 0;
+        font-family: "Philosopher";
+      }
+      & > ul {
+        padding-left: 30px;
+        font-family: "Philosopher";
+        & > li {
+          font-size: 18px;
+          margin: 5px 0;
+          & > span {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  &__paymentMode {
+    width: 85%;
+    @include if-device(phone) {
+      width: 100%;
+    }
+    @include if-device(largePhone) {
+      width: 100%;
+    }
+    @include if-device(tablet) {
+      width: 100%;
+    }
+    &__bankOption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+  }
+}
+.fontDetails {
+  margin-bottom: 80px !important;
+  font-size: 30px !important;
+}
+.paymentfontsize {
+  font-size: 26px !important;
+}
