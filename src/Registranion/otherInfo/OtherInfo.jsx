@@ -18,7 +18,7 @@ function OtherInfo({ onStreetChange, errors, onStateChange, onCityChange, onPinc
                 onStreetChange(e.target.value);
               }}
             />
-            {errors.UserAddress1 && <p className={Styles.error}>{errors.UserAddress1}</p>}
+            {errors?.UserAddress1 && <p className={Styles.error}>{errors.UserAddress1}</p>}
           </div>
           <div>
             <FormInput

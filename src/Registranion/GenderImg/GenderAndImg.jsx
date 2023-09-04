@@ -2,6 +2,7 @@ import React from "react";
 import Styles from "./index.module.scss";
 
 function GenderAndImg({ onGenderchange, formData, errors, onImageFileChange, onDocumentFileChange }) {
+  console.log(formData);
   return (
     <>
       <div className={Styles.main}>
@@ -9,15 +10,15 @@ function GenderAndImg({ onGenderchange, formData, errors, onImageFileChange, onD
           <div className={Styles.c1}>
             <div className={Styles.main__con__gender}>
               <div className={Styles.main__con__gender__radioGroup}>
-                <input type="radio" id="male" name="gender" value="male" checked={formData.gender === "male"} onChange={(e) => onGenderchange(e.target.value)} />
+                <input type="radio" id="male" name="gender" value="male" onChange={(e) => onGenderchange(e.target.value)} checked={formData?.gender === "male"} />
                 <label>Male</label>
               </div>
               <div className={Styles.main__con__gender__radioGroup}>
-                <input type="radio" id="female" name="gender" value="female" checked={formData.gender === "female"} onChange={(e) => onGenderchange(e.target.value)} />
+                <input type="radio" id="female" name="gender" value="female" onChange={(e) => onGenderchange(e.target.value)} checked={formData?.gender === "female"} />
                 <label>Female</label>
               </div>
               <div className={Styles.main__con__gender__radioGroup}>
-                <input type="radio" id="other" name="gender" value="other" checked={formData.gender === "other"} onChange={(e) => onGenderchange(e.target.value)} />
+                <input type="radio" id="other" name="gender" value="other" onChange={(e) => onGenderchange(e.target.value)} checked={formData?.gender === "other"} />
                 <label>Other</label>
               </div>
             </div>
