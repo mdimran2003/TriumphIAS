@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import Styles from "./index.module.scss"
 import logo from "../../Assets/logo (1).png";
 import logo1 from "../../Assets/Profile - for Mobile Version.png"
@@ -15,17 +15,6 @@ const MenuBar = () => {
         setToggle(false)
         document.body.style.overflow = "auto";
     }
-
-    // useEffect(() => {
-    //     if (toggle) {
-    //         document.body.addEventListener("click", handleBodyClick);
-    //     } else {
-    //         document.body.removeEventListener("click", handleBodyClick);
-    //     }
-    // }, [toggle]);
-    // const handleBodyClick = () => {
-    //     setToggle(!true);
-    // };
 
     return (
         <>
