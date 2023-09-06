@@ -4,8 +4,9 @@
   &__headerArea {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    padding: 20px 8px;
     &__menu {
       & > button {
         border: none;
@@ -28,97 +29,120 @@
     &__youtube {
       & > button {
         padding: 6px;
-        background-color: red;
+        background-color: #f16865;
         color: white;
         border: none;
       }
     }
   }
   &__openMenu {
-    width: 70%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: #fff;
+    &__blur{
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      height: 100dvh;
+    }
+    &__main {
+      width: 70%;
+      position: fixed;
+      height: 100dvh;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-color: #fff;
 
-    &__top {
-      // width: 100%;
-      background-color: #f16865;
-      padding: 20px;
-      &__wrap {
-        background-color: aliceblue;
-        padding: 20px;
-        display: flex;
-        column-gap: 20px;
-        border-radius: 30px;
-        align-items: center;
-        &__left {
-          width: 60px;
+      & > button {
+        position: absolute;
+        top: 0;
+        right: -33px;
+        font-size: 30px;
+        border-radius: 2px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0px 5px;
+        & > i {
+          color: #f16865;
+        }
+      }
+
+      &__top {
+        background-color: #f16865;
+        padding: 10px 20px;
+        &__wrap {
+          background-color: aliceblue;
+          padding: 20px;
+          display: flex;
+          column-gap: 20px;
+          border-radius: 30px;
+          align-items: center;
+          &__left {
+            width: 60px;
+            & > img {
+              width: 100%;
+            }
+          }
+          &__right {
+            & > p {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      &__navBar {
+        width: 80%;
+        padding: 10px 20px;
+        &__main {
+          list-style: none;
+        }
+      }
+      &__register {
+        border-top: 1px solid #f16865;
+        border-bottom: 1px solid #f16865;
+        padding: 20px 0px;
+        text-align: center;
+        &__userprofile {
+          width: 100px;
+          margin: auto;
           & > img {
             width: 100%;
           }
         }
-        &__right {
-          & > p {
-            font-size: 15px;
+        & > p {
+          margin-bottom: 10px;
+          & > span {
+            color: #e12522;
           }
         }
-      }
-    }
-    &__navBar {
-      width: 80%;
-      padding: 10px 20px;
-      &__main {
-        list-style: none;
-      }
-    }
-    &__register {
-      border-top: 1px solid #f16865;
-      border-bottom: 1px solid #f16865;
-      padding: 20px 0px;
-      text-align: center;
-      &__userprofile {
-        width: 100px;
-        margin: auto;
-        & > img {
-          width: 100%;
+        & > button {
+          background-color: #e12522;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          color: #fff;
         }
       }
-      & > p {
-        margin-bottom: 10px;
-        & > span {
-          color: #e12522;
+      &__installApp {
+        padding: 30px 15px;
+        & > p {
+          margin-bottom: 10px;
+          & > b {
+            color: #e12522;
+          }
+          & > span {
+            color: #e12522;
+          }
         }
-      }
-      & > button {
-        background-color: #e12522;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-      }
-    }
-    &__installApp {
-      padding: 30px 15px;
-      & > p {
-        margin-bottom: 10px;
-        & > b {
-          color: #e12522;
+        & > button {
+          background-color: #e12522;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          margin-top: 10px;
+          color: #fff;
         }
-        & > span {
-          color: #e12522;
-        }
-      }
-      & > button {
-        background-color: #e12522;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        margin-top: 10px;
-        color: #fff;
-
       }
     }
   }

@@ -7,7 +7,7 @@ import MenuBar from "../Components/MenuBar";
 function RootLayout({ children }) {
   if (isMobile) {
     return (
-      <div className={Styles.root}>
+      <div>
         <MenuBar />
         {children}
         <MapSection />

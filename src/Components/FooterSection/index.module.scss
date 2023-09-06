@@ -11,10 +11,13 @@
     @include if-device(phone) {
       flex-wrap: wrap;
       text-align: left;
+      padding-top: 70px;
     }
     @include if-device(largephone) {
       flex-wrap: wrap;
       text-align: left;
+      padding-top: 70px;
+
     }
     @include if-device(tablet) {
       flex-wrap: wrap;
@@ -118,7 +121,7 @@
       left: 80px;
     }
     @include if-device(largephone) {
-      left: 80px;
+      left: 30%;
     }
     @include if-device(tablet) {
       left: 300px;
